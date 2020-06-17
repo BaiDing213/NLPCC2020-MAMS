@@ -7,7 +7,9 @@ NLPCC 2020 MAMS 多属性多情感分析任务 第一名解决方案
 思路：使用多种预训练语言模型，采用加权投票的方式集成结果  
 
 **输入**：按照常规思路将aspect term或者aspect category视为额外的句子，构造句对进行分类  
-<center>[CLS] context [SEP] aspect term/category [SEP] </center>
+<p align="center" >
+<strong> [CLS] context [SEP] aspect term/category [SEP]</strong> 
+</p>
 
 **模型**：主要选取5种预训练语言模型进行训练，包括BERT，ALBert，RoBERTa，XLNet和ERNIE。在五种与训练语言模型上对数据集进行微调，根据验证集的结果调节超参数。
 BERT，ALBert，RoBERTa，XLNet模型构建是基于HuggingFace开源的transformers库构建。ERNIE模型是基于百度开源的paddlepaddle版本代码库构建。  
