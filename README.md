@@ -17,3 +17,6 @@ BERT，ALBert，RoBERTa，XLNet模型构建是基于HuggingFace开源的transfor
 **加权投票**：由于ERNIE模型整体在验证集上的结果较好，在保存模型是save最好的两个中间状态，在加权投票时设置较大的权重。额外地，在测试阶段，我们合并训练集和测试集的数据，构造一个更大的训练集来训练ERNIE模型，也得到一组结果。最终的权重如下图所示。  
 
 ![](https://github.com/BaiDing213/NLPCC2020-MAMS/blob/master/weights.png)
+
+## Reference
+Fengqing Zhou, Jinhui Zhang, Tao Peng, et al. Weighted Pre-trained Language Models for Multi-Aspect-Based Multi-Sentiment Analysis[C]//Proceedings of the 9th CCF International Conference of Natural Language Processing and Chinese Computing, 2020: 501-511.
